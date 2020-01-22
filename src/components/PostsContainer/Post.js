@@ -10,7 +10,7 @@ import dummyData from "../../dummy-data";
 
 const Post = props => {
   // set up state for the likes
-  console.log("post props", props);
+  // console.log("post props", props);
   const [likes, setLikes] = useState(props.post.likes);
   // console.log(likes);
   const incrementLikes = () =>
@@ -33,8 +33,9 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
+     
       <LikeSection 
-        like = {likes}
+        likes = {likes} incrementLikes = {incrementLikes}
       />
       <CommentSection
         postId={props.post.imageUrl}
